@@ -1,10 +1,11 @@
-<main class="main">
+<main class="main min-h-screen grid place-content-center">
   <h1 class="font-bold">Hola como andas</h1>
   <div class="flex items-center justify-center">
     <button class="rounded-full font-bold text-5xl bg-blue-400 cursor-pointer p-2" (click)="incrementarContador()">+</button>
     <h2 class="text-center w-xs font-bold text-2xl">Contador: {{valorContador}}</h2>
     <button class="rounded-full font-bold text-5xl bg-blue-400 cursor-pointer p-2" (click)="decrementarContador()">-</button>
   </div>
+  <app-sueldo></app-sueldo>
 </main>
 
 <router-outlet />
