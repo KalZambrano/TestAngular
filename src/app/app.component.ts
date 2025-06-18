@@ -10,4 +10,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Semana13';
+  valorContador: number = 0
+  incrementarContador(){
+    this.valorContador++;
+  }
+  decrementarContador(){
+    this.valorContador--;
+  }
 }
