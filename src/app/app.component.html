@@ -5,11 +5,6 @@
   
   <section class="bg-blue-100 p-4">
     <h1 class="font-bold">Hola como andas</h1>
-    <div class="flex items-center justify-center">
-      <button class="rounded-full font-bold text-5xl bg-blue-400 cursor-pointer p-2" (click)="incrementarContador()">+</button>
-      <h2 class="text-center w-xs font-bold text-2xl">Contador: {{valorContador}}</h2>
-      <button class="rounded-full font-bold text-5xl bg-blue-400 cursor-pointer p-2" (click)="decrementarContador()">-</button>
-    </div>
     <div>
       <h2>Nombre del usuario: {{nomUser}}</h2>
       <input class="shadow border-2 border-amber-300" type="text" [(ngModel)] = "nomUser">
@@ -24,7 +19,7 @@
     <app-sueldo></app-sueldo>
     <app-notas></app-notas>
   </section>
-  <div class="bg-amber-100 w-full mx-auto mb-10 flex items-center p-4">
+  <div class="bg-amber-100 w-full mx-auto mb-10 flex items-center p-4 justify-center">
     <app-weekly-exercise></app-weekly-exercise>
   </div>
 </main>

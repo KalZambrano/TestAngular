@@ -1,1 +1,20 @@
-<p>exercise1 works!</p>
+<h2 class="font-bold text-2xl mb-2 text-blue-500">Ejercicio de Boleto de Cine</h2>
+
+<form (ngSubmit)="paymentBill()">
+    <div class="flex flex-col gap-2">
+        <div class="flex gap-2">
+            <label for="">Ingresa tu edad</label>
+            <input class="shadow border border-purple-800 rounded-md" type="number" name="edad" id="edad" [(ngModel)] = "edad" required>
+        </div>
+        <div class="flex gap-2">
+            <label for="">Ingresa tipo de boleto</label>
+            <select class="shadow border border-purple-800 rounded-md" name="ticketType" id="ticketType" [(ngModel)] = "ticketType">
+                <option value="">Puede seleccionar un tipo</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Adulto Mayor">Adulto Mayor</option>
+            </select>
+        </div>
+        <button type="submit" class="bg-amber-600 px-2 py-1 cursor-pointer rounded-md">Subir</button>
+    </div>
+    <p class="font-bold">Total a pagar: S/.{{total}}</p>
+</form>

@@ -16,13 +16,6 @@ import { WeeklyExerciseComponent } from './weekly-exercise/weekly-exercise.compo
 export class AppComponent {
   title = 'Semana13';
   nomUser: string = 'KalCio'
-  valorContador: number = 0
-  incrementarContador(){
-    this.valorContador++;
-  }
-  decrementarContador(){
-    this.valorContador--;
-  }
 
   condicion1: boolean = false;
   condicion2: boolean = false;

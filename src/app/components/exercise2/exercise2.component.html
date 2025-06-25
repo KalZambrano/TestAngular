@@ -1,9 +1,9 @@
-<h2 class="font-bold text-2xl mb-2">Ejercicio de Grupo Etario</h2>
+<h2 class="font-bold text-2xl mb-2 text-red-500">Ejercicio de Grupo Etario</h2>
 <form (ngSubmit)="designarGrupo()">
     <label for="">Ingresa tu edad</label>
     <div class="flex gap-x-4">
-        <input class="shadow border-2 border-black rounded-md" type="number" name="edad" id="edad" [(ngModel)] = "edad" required>
+        <input class="shadow border border-purple-800 rounded-md" type="number" name="edad" id="edad" [(ngModel)] = "edad" required>
         <button type="submit" class="bg-amber-600 px-2 py-1 cursor-pointer rounded-md">Subir</button>
     </div>
-    <p class="font-bold">{{grupoEtario}}</p>
+    <p class="font-bold">Grupo Etario: <strong>{{grupoEtario}}</strong></p>
 </form> 
