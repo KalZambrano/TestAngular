@@ -1,21 +1,28 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sueldo',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   template: `
     <h2 class="text-green-400 text-2xl font-semibold">Calcular sueldo</h2>
-    <p><strong>Sueldo Base: </strong>{{sueldoBase}}</p>
+    <form (ngSubmit)="calcularSueldoTotal()">
+     <div class="flex flex-col">
+      <label>Ingresa tu sueldo</label>
+      <input class="shadow border border-purple-800 rounded-md w-1/2 px-2" type="number" name="sueldoBase" id="sueldoBase" [(ngModel)] = "sueldoBase"/>
+     </div>
+     <button type="submit" class="rounded-md bg-green-700 p-2 mt-4 text-white cursor-pointer"> Calcular Sueldo Total</button>
+    </form>
+    
     <p><strong>Descuento AFP (12%): </strong>{{descuentoAFP}}</p>
     <p><strong>Bonificación (5%): </strong>{{bonificacion}}</p>
     <p><strong>Sueldo Total:</strong> {{sueldoTotal}}</p>
-    <button (click)="calcularSueldoTotal()" class="rounded-md bg-green-700 p-2 text-white cursor-pointer"> Calcular Sueldo Total</button>
   `,
   styles: ``
 })
 export class SueldoComponent {
-  sueldoBase:number = 1500
+  sueldoBase:number = 0
   descuentoAFP:number = 0
   bonificacion:number = 0
   sueldoTotal:number = 0
