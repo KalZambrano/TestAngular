@@ -1,0 +1,27 @@
+<header class="flex gap-x-4 justify-center items-center bg-blue-200 min-w-screen py-3 fixed">
+    <a href="#" class="rounded-full bg-blue-500 hover:bg-blue-800/70 px-3 py-1">Inicio</a>
+    <a href="#" class="rounded-full bg-blue-500 hover:bg-blue-800/70 px-3 py-1">Nosotros</a>
+    <a href="#" class="rounded-full bg-blue-500 hover:bg-blue-800/70 px-3 py-1">Pagos</a>
+    <a href="#" class="rounded-full bg-blue-500 hover:bg-blue-800/70 px-3 py-1">FQA</a>
+    <a href="#" class="rounded-full bg-blue-500 hover:bg-blue-800/70 px-3 py-1">Wenaas</a>
+</header>
+<div class="flex flex-col justify-center items-center pt-20">
+    <h1>Holaa {{nombre}}</h1>
+    <h2><strong>Apellido:</strong> {{apellido}}</h2>
+    
+    <p><strong>País:</strong> {{pais}}</p>
+
+    <form action="" (ngSubmit)="verificarElegible()">
+        <div class="mb-2 flex flex-col">
+            <p><strong>Edad:</strong> {{edad}}</p>
+            <label for="">Ingrese su edad</label>
+            <input class="shadow border-2 border-amber-300" name="edad" id="edad" type="number" [(ngModel)] = "edad" required>
+        </div>
+        <div class="mb-2 flex flex-col">
+            <label for="">Ingrese su pais</label>
+            <input class="shadow border-2 border-amber-300" name="pais" id="pais" type="text" [(ngModel)] = "pais" required>
+        </div>
+        <button type="submit">Enviar</button>
+        <h2>{{elegibleParaVotar}}</h2>
+    </form>
+</div>
